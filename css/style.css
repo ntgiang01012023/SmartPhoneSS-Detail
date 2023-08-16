@@ -27,13 +27,11 @@ main {
     width: 1192px;
     height: auto;
     margin: 0 auto;
-    border: 1px solid royalblue;
 }
 
 nav {
     width: 100%;
     height: auto;
-    background-color: blanchedalmond;
     padding: 21px 0;
 }
 
@@ -51,11 +49,22 @@ nav ul li {
     padding: 4px 15px;
 }
 
+nav ul li.active {
+    background-color: #009981;
+    border: 1px solid #009981;
+}
+
 nav ul li a {
     text-decoration: none;
     font-size: 15px;
     color: black;
 }
+
+nav ul li a.active {
+    color: white;
+}
+
+
 
 section#info-product {
     width: 100%;
@@ -64,7 +73,6 @@ section#info-product {
     justify-content: space-between;
     align-items: start;
     gap: 12px;
-    border: 1px solid blue;
 }
 
 .info-left {
@@ -75,7 +83,6 @@ section#info-product {
 .info-left-name {
     width: 100%;
     height: 30px;
-    border: 1px solid blue;
     margin-bottom: 12px;
 }
 
@@ -87,7 +94,7 @@ section#info-product {
 .info-left-detail {
     width: 100%;
     height: 367px;
-    border: 1px solid blue;
+    border-radius: 10px;
     background-color: #3CBA92;
     padding: 55px 35px;
     display: flex;
@@ -137,7 +144,6 @@ section#info-product {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid blue;
     margin-bottom: 12px;
 }
 
@@ -193,11 +199,11 @@ section#info-product {
     height: 206px;
     border-radius: 10px;
     background-color: white;
-    border: 1px solid blue;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    margin-bottom: 12px;
 }
 
 .info-left-ship-text {
@@ -218,6 +224,157 @@ section#info-product {
     color: #4B4B4B;
 }
 
+.info-left-address {
+    width: 100%;
+    height: 467px;
+    border-radius: 10px;
+    background-color: white; 
+}
+
+.info-left-address-title {
+    width: 100%;
+    height: 54px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #EBEBEB;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.info-left-address-title img {
+    width: 30px;
+    height: 30px;
+}
+
+.info-left-address-title h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4B4B4B;
+}
+
+.info-left-address-select {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 0 12px;
+    margin-bottom: 12px;
+}
+
+.info-left-address-select select {
+    width: 100%;
+    height: 44px;
+    border: 1px solid #C9C9C9;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #191919;
+    outline: none;
+}
+
+.info-left-address-result {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.info-left-address-result h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #191919;
+}
+
+.info-left-address-result h3 span {
+    color: #009981;
+}
+
+.info-left-address-list {
+    width: calc(100% - 24px);
+    height: 263px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #F4F4F4;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 60px;
+    padding: 18px;
+    overflow-y: scroll;
+}
+
+.info-left-address-list-phone {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-left-address-list-phone-detail {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-left-address-list-phone-detail img {
+    width: 20px;
+    height: 20px;
+}
+
+.info-left-address-list-phone-detail h5 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #FD475A;
+}
+
+.info-left-address-list-address {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-left-address-list-address-detail {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-left-address-list-address-detail img {
+    width: 20px;
+    height: 20px;
+}
+
+.info-left-address-list-address-detail h5 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #009981;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -227,4 +384,28 @@ section#info-product {
     width: 485px;
     height: 800px;
     background-color: #F4F4F4;
+    border: 1px solid blue;
+    padding-top: 41px;
 }
+
+.info-right-versions {
+    width: 485px;
+    height: 200px;
+    background-color: aquamarine;
+    border: 1px solid blue;
+}
+
+.info-right-versions-title {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.info-right-versions-title h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #191919;
+}
+
