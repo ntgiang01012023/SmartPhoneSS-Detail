@@ -1,3 +1,16 @@
+function changeIcon() {
+  var heartIcon = document.getElementById("heart-icon");
+  if (heartIcon.classList.contains("fa-regular")) {
+      heartIcon.classList.remove("fa-regular");
+      heartIcon.classList.add("fa-solid");
+  } else {
+      heartIcon.classList.remove("fa-solid");
+      heartIcon.classList.add("fa-regular");
+  }
+}
+
+
+
 const districtsByCity = {
   hanoi: ["Ba Đình", "Hoàn Kiếm", "Hai Bà Trưng", "Đống Đa", "Tây Hồ", "Cầu Giấy", "Thanh Xuân", "Hoàng Mai"],
   danang: ["Hải Châu", "Thanh Khê", "Sơn Trà", "Ngũ Hành Sơn", "Liên Chiểu"],
@@ -212,6 +225,91 @@ showProductsCompare(currentPageCompare);
 
 
 
+const productsPerPagenew = 2;
+let currentPagenew = 0;
+
+function showProductsnew(page) {
+    const productContainernew = document.getElementById("product-container-new");
+    const translateX = -page * 100;
+
+    productContainernew.style.transform = `translateX(${translateX}%)`;
+
+    const paginateDotsnew = document.querySelectorAll(".new-paginate-dot");
+    paginateDotsnew.forEach((dot, index) => {
+        if (index === page) {
+            dot.classList.add("active");
+        } else {
+            dot.classList.remove("active");
+        }
+    });
+}
+
+function changePagenew(page) {
+    currentPagenew = page;
+    showProductsnew(currentPagenew);
+}
+
+function showNextProductsnew() {
+    const productContainernew = document.getElementById("product-container-new");
+    const productsnew = productContainernew.querySelectorAll(".new-product-detail");
+    
+    if (currentPagenew < Math.ceil(productsnew.length / productsPerPagenew) - 1) {
+        currentPagenew++;
+        showProductsnew(currentPagenew);
+    }
+}
+
+function showPreviousProductsnew() {
+    if (currentPagenew > 0) {
+      currentPagenew--;
+        showProductsnew(currentPagenew);
+    }
+}
+
+showProductsnew(currentPagenew);
 
 
 
+
+const productsPerPagenews = 2;
+let currentPagenews = 0;
+
+function showProductsnews(page) {
+    const productContainernews = document.getElementById("product-container-news");
+    const translateX = -page * 100;
+
+    productContainernews.style.transform = `translateX(${translateX}%)`;
+
+    const paginateDotsnews = document.querySelectorAll(".news-paginate-dot");
+    paginateDotsnews.forEach((dot, index) => {
+        if (index === page) {
+            dot.classList.add("active");
+        } else {
+            dot.classList.remove("active");
+        }
+    });
+}
+
+function changePagenews(page) {
+    currentPagenews = page;
+    showProductsnews(currentPagenews);
+}
+
+function showNextProductsnews() {
+    const productContainernews = document.getElementById("product-container-news");
+    const productsnews = productContainernews.querySelectorAll(".news-product-detail");
+    
+    if (currentPagenews < Math.ceil(productsnews.length / productsPerPagenews) - 1) {
+        currentPagenews++;
+        showProductsnews(currentPagenews);
+    }
+}
+
+function showPreviousProductsnews() {
+    if (currentPagenews > 0) {
+      currentPagenews--;
+        showProductsnews(currentPagenews);
+    }
+}
+
+showProductsnews(currentPagenews);
