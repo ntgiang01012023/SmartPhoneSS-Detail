@@ -1,3 +1,31 @@
+function toggleBorder(clickedDiv) {
+  const costDiv = document.querySelector('.info-right-price-cost');
+  const oldDiv = document.querySelector('.info-right-price-old');
+
+  if (clickedDiv === 'cost') {
+      costDiv.style.border = '2px solid red';
+      oldDiv.style.border = '2px solid transparent';
+
+      costDiv.classList.add('active');
+      oldDiv.classList.remove('active');
+  } else if (clickedDiv === 'old') {
+      costDiv.style.border = '2px solid transparent';
+      oldDiv.style.border = '2px solid red';
+
+      oldDiv.classList.add('active');
+      costDiv.classList.remove('active');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const oldDiv = document.querySelector('.info-right-price-old');
+  oldDiv.classList.add('active');
+});
+
+
+
+
+
 function changeIcon() {
   var heartIcon = document.getElementById("heart-icon");
   if (heartIcon.classList.contains("fa-regular")) {
